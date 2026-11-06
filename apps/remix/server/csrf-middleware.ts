@@ -1,4 +1,5 @@
 import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
+import { env } from '@documenso/lib/utils/env';
 import { createMiddleware } from 'hono/factory';
 
 import type { HonoEnv } from './router';
@@ -28,7 +29,7 @@ export const csrfMiddleware = createMiddleware<HonoEnv>(async (c, next) => {
   const origin = c.req.header('Origin');
   const validOrigin = new URL(NEXT_PUBLIC_WEBAPP_URL()).origin;
 
-  if (origin !== validOrigin) {
+  if (origin !== validOrigin && !getExtraTrustedOrigins().includes(origin ?? '')) {
     c.get('logger').warn({
       event: 'csrf.origin_rejected',
       method: c.req.method,
@@ -57,3 +58,14 @@ const isApiAuthorization = (header: string | undefined): boolean => {
 
   return value.startsWith('bearer ') || value.startsWith('api_');
 };
+
+/**
+ * Extra exact origins to accept, comma separated. Unset in production.
+ * Needed in GitHub Codespaces, whose port forwarding rewrites the Origin header
+ * to `https://localhost:<port>` while the app runs on the public codespace URL.
+ */
+const getExtraTrustedOrigins = (): string[] =>
+  (env('NEXT_PRIVATE_CSRF_TRUSTED_ORIGINS') ?? '')
+    .split(',')
+    .map((value) => value.trim())
+    .filter(Boolean);

@@ -10,6 +10,8 @@ cp .env.example .env
 # Auth cookies are scoped to NEXT_PUBLIC_WEBAPP_URL, so login fails unless it matches.
 if [ -n "${CODESPACE_NAME:-}" ]; then
   sed -i "s#^NEXT_PUBLIC_WEBAPP_URL=.*#NEXT_PUBLIC_WEBAPP_URL=\"https://${CODESPACE_NAME}-3000.${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}\"#" .env
+  # Codespaces rewrites the Origin header to https://localhost:3000.
+  echo 'NEXT_PRIVATE_CSRF_TRUSTED_ORIGINS="https://localhost:3000"' >> .env
 fi
 
 # Run the dev setup
