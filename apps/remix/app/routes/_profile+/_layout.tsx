@@ -52,13 +52,7 @@ export default function PublicProfileLayout() {
             >
               <BrandingLogo className="hidden h-6 w-auto sm:block" />
 
-              <img
-                src={LogoIcon}
-                alt="Documenso Logo"
-                width={48}
-                height={48}
-                className="h-10 w-auto sm:hidden dark:invert"
-              />
+              <img src={LogoIcon} alt="CodSign" width={48} height={48} className="h-10 w-auto sm:hidden" />
             </Link>
 
             <div className="flex flex-row items-center justify-center">
