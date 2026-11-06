@@ -280,7 +280,7 @@ const renderColumnTwo = (options: RenderColumnOptions) => {
   const isRejected = Boolean(recipient.logs.rejected);
 
   if (recipient.signatureField?.secondaryId) {
-    // Signature container with green border
+    // Signature container with CodSign blue border
     const signatureContainer = new Konva.Group({ x: 0, y: 0 });
 
     const minSignatureHeight = 40;
@@ -335,7 +335,7 @@ const renderColumnTwo = (options: RenderColumnOptions) => {
       y: 2,
       width: maxSignatureWidth,
       height: signatureHeight,
-      stroke: 'rgba(122, 196, 85, 0.6)',
+      stroke: 'rgba(37, 99, 235, 0.6)',
       strokeWidth: 1,
       cornerRadius: 8,
     });
@@ -346,7 +346,7 @@ const renderColumnTwo = (options: RenderColumnOptions) => {
       y: 0,
       width: maxSignatureWidth + 4,
       height: signatureHeight + 4,
-      stroke: 'rgba(122, 196, 85, 0.1)',
+      stroke: 'rgba(37, 99, 235, 0.1)',
       strokeWidth: 4,
       cornerRadius: 8,
     });
