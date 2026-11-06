@@ -796,7 +796,7 @@ msgstr "<0>{organisationName}</0>에서 귀하를 대신해 계정을 생성하�
 
 #: packages/email/templates/organisation-account-link-confirmation.tsx
 msgid "<0>{organisationName}</0> has requested to link your current Documenso account to their organisation."
-msgstr "<0>{organisationName}</0>에서 귀하의 기존 Documenso 계정을 조직에 연결하려고 합니다."
+msgstr "<0>{organisationName}</0>에서 귀하의 기존 CodSign 계정을 조직에 연결하려고 합니다."
 
 #: apps/remix/app/components/dialogs/admin-recipient-delete-dialog.tsx
 msgid "<0>{recipientLabel}</0> and their fields will be removed from this document. They and the document owner will be emailed."
@@ -1164,7 +1164,7 @@ msgstr "귀하를 위한 계정 생성 요청이 있습니다."
 
 #: packages/email/templates/organisation-account-link-confirmation.tsx
 msgid "A request has been made to link your Documenso account"
-msgstr "귀하의 Documenso 계정을 연결해 달라는 요청이 있습니다."
+msgstr "귀하의 CodSign 계정을 연결해 달라는 요청이 있습니다."
 
 #. placeholder {0}: team.name
 #: packages/lib/server-only/team/create-team-email-verification.ts
@@ -1227,7 +1227,7 @@ msgstr "계정 수락 및 연결"
 
 #: packages/email/templates/organisation-invite.tsx
 msgid "Accept invitation to join an organisation on Documenso"
-msgstr "Documenso 조직 초대 수락"
+msgstr "CodSign 조직 초대 수락"
 
 #: packages/email/templates/confirm-team-email.tsx
 msgid "Accept team email request for {teamName} on Documenso"
@@ -1835,7 +1835,7 @@ msgstr "관리자가 귀하의 \"{documentName}\" 문서를 삭제했습니다."
 
 #: packages/email/template-components/template-admin-user-created.tsx
 msgid "An administrator has created a Documenso account for you."
-msgstr "관리자가 회원님을 위해 Documenso 계정을 생성했습니다."
+msgstr "관리자가 회원님을 위해 CodSign 계정을 생성했습니다."
 
 #: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
 msgid "An electronic signature provided by you on our platform, achieved through clicking through to a document and entering your name, or any other electronic signing method we provide, is legally binding. It carries the same weight and enforceability as a manual signature written with ink on paper."
@@ -4519,7 +4519,7 @@ msgstr ""
 
 #: apps/remix/app/components/general/admin-license-card.tsx
 msgid "Documenso License"
-msgstr "Documenso 라이선스"
+msgstr "CodSign 라이선스"
 
 #: apps/remix/app/components/dialogs/account-delete-dialog.tsx
 msgid "Documenso will delete <0>all of your documents</0>, along with all of your completed documents, signatures, and all other resources belonging to your Account."
@@ -7035,7 +7035,7 @@ msgstr "잘못된 라이선스 키"
 
 #: apps/remix/app/components/general/admin-license-status-banner.tsx
 msgid "Invalid License Type - Your Documenso instance is using features that are not part of your license."
-msgstr "잘못된 라이선스 유형 - 현재 Documenso 인스턴스에서 사용 중인 기능은 보유한 라이선스에 포함되지 않습니다."
+msgstr "잘못된 라이선스 유형 - 현재 CodSign 인스턴스에서 사용 중인 기능은 보유한 라이선스에 포함되지 않습니다."
 
 #: apps/remix/app/routes/_unauthenticated+/team.verify.email.$token.tsx
 msgid "Invalid link"
@@ -7420,7 +7420,7 @@ msgstr "템플릿 연결"
 
 #: packages/email/templates/organisation-account-link-confirmation.tsx
 msgid "Link your Documenso account"
-msgstr "Documenso 계정 연결"
+msgstr "CodSign 계정 연결"
 
 #: apps/remix/app/routes/_authenticated+/settings+/security._index.tsx
 #: apps/remix/app/routes/_authenticated+/settings+/security.linked-accounts.tsx
@@ -7795,7 +7795,7 @@ msgstr "최소"
 
 #: apps/remix/app/components/general/admin-license-status-banner.tsx
 msgid "Missing License - Your Documenso instance is using features that require a license."
-msgstr "라이선스 누락 - 현재 Documenso 인스턴스에서 사용하는 기능에는 라이선스가 필요합니다."
+msgstr "라이선스 누락 - 현재 CodSign 인스턴스에서 사용하는 기능에는 라이선스가 필요합니다."
 
 #: apps/remix/app/components/general/envelope-editor/envelope-editor-fields-page.tsx
 msgid "Missing Recipients"
@@ -9492,7 +9492,7 @@ msgstr "읽기 전용"
 
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.support.tsx
 msgid "Read our documentation to get started with Documenso."
-msgstr "문서를 읽고 Documenso 사용을 시작하세요."
+msgstr "문서를 읽고 CodSign 사용을 시작하세요."
 
 #: apps/remix/app/components/tables/admin-document-recipient-item-table.tsx
 msgid "Read Status"
@@ -10213,7 +10213,7 @@ msgstr "홈으로 돌아가기"
 
 #: apps/remix/app/routes/_unauthenticated+/o.$orgUrl.signin.tsx
 msgid "Return to Documenso sign in page here"
-msgstr "여기를 눌러 Documenso 로그인 페이지로 돌아가기"
+msgstr "여기를 눌러 CodSign 로그인 페이지로 돌아가기"
 
 #: apps/remix/app/components/general/envelope-editor/envelope-editor.tsx
 msgid "Return to documents"
@@ -10854,7 +10854,7 @@ msgstr "템플릿 속성과 수신자 정보를 설정하세요."
 
 #: packages/email/templates/admin-user-created.tsx
 msgid "Set your password for Documenso"
-msgstr "Documenso 계정의 비밀번호를 설정하세요"
+msgstr "CodSign 계정의 비밀번호를 설정하세요"
 
 #: apps/remix/app/components/general/app-command-menu.tsx
 #: apps/remix/app/components/general/app-command-menu.tsx
@@ -10991,7 +10991,7 @@ msgstr "문서 서명"
 
 #: apps/remix/app/routes/_recipient+/_layout.tsx
 msgid "Sign Document - Documenso"
-msgstr "문서 서명 - Documenso"
+msgstr "문서 서명 - CodSign"
 
 #: apps/remix/app/components/embed/multisign/multi-sign-document-list.tsx
 msgid "Sign Documents"
@@ -12823,7 +12823,7 @@ msgstr "이 문서의 수신자가 너무 많습니다. 일부 수신자를 제�
 
 #: apps/remix/app/components/general/document/document-certificate-qr-view.tsx
 msgid "This document is available in your Documenso account. You can view more details, recipients, and audit logs there."
-msgstr "이 문서는 귀하의 Documenso 계정에서 확인할 수 있습니다. 자세한 정보, 수신자, 감사 로그를 조회할 수 있습니다."
+msgstr "이 문서는 귀하의 CodSign 계정에서 확인할 수 있습니다. 자세한 정보, 수신자, 감사 로그를 조회할 수 있습니다."
 
 #: apps/remix/app/routes/_authenticated+/t.$teamUrl+/documents.$id._index.tsx
 msgid "This document is currently a draft and has not been sent"
@@ -12860,7 +12860,7 @@ msgstr "이 문서는 직접 링크를 사용해 생성되었습니다."
 
 #: packages/email/template-components/template-footer.tsx
 msgid "This document was sent using <0>Documenso</0>."
-msgstr "이 문서는 <0>Documenso</0>를 사용하여 전송되었습니다."
+msgstr "이 문서는 <0>CodSign</0>를 사용하여 전송되었습니다."
 
 #: apps/remix/app/components/dialogs/envelope-duplicate-dialog.tsx
 msgid "This document will be duplicated."
@@ -14918,7 +14918,7 @@ msgstr "조직에 대해 SSO 포털을 활성화할지 여부"
 
 #: apps/remix/app/routes/_profile+/p.$url.tsx
 msgid "While waiting for them to do so you can create your own Documenso account and get started with document signing right away."
-msgstr "상대방을 기다리는 동안, Documenso 계정을 생성하고 바로 전자 서명을 시작할 수 있습니다."
+msgstr "상대방을 기다리는 동안, CodSign 계정을 생성하고 바로 전자 서명을 시작할 수 있습니다."
 
 #: apps/remix/app/components/dialogs/organisation-create-dialog.tsx
 msgid "Whitelabeling, unlimited members and more"

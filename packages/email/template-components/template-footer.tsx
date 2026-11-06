@@ -33,7 +33,7 @@ export const TemplateFooter = ({ isDocument = true, reportUrl }: TemplateFooterP
         <Text className="my-4 text-base text-muted-foreground">
           <Trans>
             This document was sent using{' '}
-            <Link className="text-primary" href="https://documen.so/mail-footer">
+            <Link className="text-primary" href="https://github.com/byz5k4d8hv-code/eSignature">
               Documenso
             </Link>
             .
@@ -62,13 +62,7 @@ export const TemplateFooter = ({ isDocument = true, reportUrl }: TemplateFooterP
         </Text>
       )}
 
-      {!branding.brandingEnabled && (
-        <Text className="my-8 text-muted-foreground text-sm">
-          Documenso, Inc.
-          <br />
-          2261 Market Street, #5211, San Francisco, CA 94114, USA
-        </Text>
-      )}
+      {!branding.brandingEnabled && <Text className="my-8 text-muted-foreground text-sm">CodSign</Text>}
     </Section>
   );
 };
