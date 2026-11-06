@@ -36,10 +36,12 @@ export type GenerateCertificatePdfOptions = {
   language?: string;
   pageWidth: number;
   pageHeight: number;
+  /** SHA-256 (hex) of the document as sent for signing. */
+  documentSha256?: string;
 };
 
 export const generateCertificatePdf = async (options: GenerateCertificatePdfOptions) => {
-  const { envelope, envelopeOwner, recipients, fields, language, pageWidth, pageHeight } = options;
+  const { envelope, envelopeOwner, recipients, fields, language, pageWidth, pageHeight, documentSha256 } = options;
 
   const documentLanguage = ZSupportedLanguageCodeSchema.parse(language);
 
@@ -141,6 +143,7 @@ export const generateCertificatePdf = async (options: GenerateCertificatePdfOpti
     hidePoweredBy: organisationClaim.flags.hidePoweredBy ?? false,
     pageWidth,
     pageHeight,
+    documentSha256,
     i18n,
   };
 

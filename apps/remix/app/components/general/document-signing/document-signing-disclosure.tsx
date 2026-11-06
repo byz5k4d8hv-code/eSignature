@@ -23,6 +23,15 @@ export const DocumentSigningDisclosure = ({ className, ...props }: DocumentSigni
           .
         </Trans>
       </span>
+      <span className="mt-2 block">
+        <Trans>
+          Your name, email, IP address and device are recorded as evidence of this signature. Read our{' '}
+          <Link className="text-documenso-700 underline" to="/articles/privacy-notice" target="_blank">
+            privacy notice
+          </Link>
+          .
+        </Trans>
+      </span>
     </p>
   );
 };
