@@ -1,3 +1,4 @@
+import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { PDFDocument } from '@cantoo/pdf-lib';
 import { finalizeTspEnvelopeCompletion } from '@documenso/ee/server-only/signing/csc/finalize-tsp-completion';
@@ -258,6 +259,8 @@ export const run = async ({ payload, io }: { payload: TSealDocumentJobDefinition
           pageWidth,
           pageHeight,
           additionalAuditLogs,
+          // Evidence: hash of the document exactly as it was sent for signing.
+          documentSha256: createHash('sha256').update(pdfData).digest('hex'),
         };
 
         const makeCertificatePdf = async () =>

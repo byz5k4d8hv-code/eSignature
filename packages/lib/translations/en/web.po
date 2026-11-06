@@ -16255,3 +16255,7 @@ msgstr "Zoom in"
 #: packages/ui/primitives/signature-pad/signature-pad-upload.tsx
 msgid "Zoom out"
 msgstr "Zoom out"
+
+#: apps/remix/app/components/general/document-signing/document-signing-disclosure.tsx
+msgid "Your name, email, IP address and device are recorded as evidence of this signature. Read our <0>privacy notice</0>."
+msgstr "Your name, email, IP address and device are recorded as evidence of this signature. Read our <0>privacy notice</0>."

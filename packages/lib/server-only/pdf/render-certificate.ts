@@ -58,6 +58,8 @@ type GenerateCertificateOptions = {
   };
   pageWidth: number;
   pageHeight: number;
+  /** SHA-256 (hex) of the document as sent for signing, shown in the footer as evidence. */
+  documentSha256?: string;
 };
 
 // Helper function to get device info from user agent
@@ -715,6 +717,24 @@ const renderTables = (options: RenderTablesOptions) => {
   return tables;
 };
 
+const renderHashFooter = ({
+  margin,
+  pageHeight,
+  documentSha256,
+}: {
+  margin: number;
+  pageHeight: number;
+  documentSha256: string;
+}) =>
+  new Konva.Text({
+    x: margin,
+    y: pageHeight - textXs * 2 - 14,
+    text: `SHA-256: ${documentSha256}`,
+    fontFamily: 'Inter',
+    fontSize: textXs,
+    fill: textMutedForegroundLight,
+  });
+
 export async function renderCertificate({
   recipients,
   envelopeId,
@@ -724,6 +744,7 @@ export async function renderCertificate({
   envelopeOwner,
   pageWidth,
   pageHeight,
+  documentSha256,
 }: GenerateCertificateOptions) {
   ensureFontLibrary();
 
@@ -813,6 +834,10 @@ export async function renderCertificate({
     });
     page.add(footerText);
 
+    if (documentSha256) {
+      page.add(renderHashFooter({ margin, pageHeight, documentSha256 }));
+    }
+
     page.add(group);
     stage.add(page);
 
@@ -840,6 +865,10 @@ export async function renderCertificate({
       fill: textMutedForegroundLight,
     });
     page.add(overflowFooterText);
+
+    if (documentSha256) {
+      page.add(renderHashFooter({ margin, pageHeight, documentSha256 }));
+    }
 
     page.add(brandingGroup);
     stage.add(page);

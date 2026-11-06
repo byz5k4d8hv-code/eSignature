@@ -1,13 +1,15 @@
 {
   "name": "Documenso",
-  "image": "mcr.microsoft.com/devcontainers/base:bullseye",
+  "image": "mcr.microsoft.com/devcontainers/base:bookworm",
   "features": {
     "ghcr.io/devcontainers/features/docker-in-docker:2": {
       "version": "latest",
       "enableNonRootDocker": "true",
-      "moby": "true"
+      "moby": "false"
     },
-    "ghcr.io/devcontainers/features/node:1": {}
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "24"
+    }
   },
   "onCreateCommand": "./.devcontainer/on-create.sh",
   "forwardPorts": [3000, 54320, 9000, 2500, 1100],
