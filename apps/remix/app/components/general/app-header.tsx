@@ -48,7 +48,7 @@ export const Header = ({ className, fullWidth = false, ...props }: HeaderProps) 
   return (
     <header
       className={cn(
-        'sticky top-0 z-[60] flex h-16 w-full items-center border-b border-b-transparent bg-white/70 backdrop-blur dark:bg-background/95 duration-200 supports-backdrop-blur:bg-background/60',
+        'sticky top-0 z-[60] flex h-16 w-full items-center border-b border-b-transparent bg-white/70 backdrop-blur dark:border-b-[#21405F]/60 dark:bg-[#071D33]/80 duration-200 supports-backdrop-blur:bg-background/60',
         (scrollY > 5 || fullWidth) && 'border-b-border',
         className,
       )}
