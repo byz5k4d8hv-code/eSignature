@@ -26,11 +26,13 @@ export const AppBackground = () => (
 
     {/* Dark theme (default): deep navy #071D33, glow only at the edges */}
     <div className="absolute inset-0 hidden bg-[#071D33] dark:block">
-      <div className="absolute -left-56 -top-56 h-[34rem] w-[34rem] rounded-full bg-[#2563EB] opacity-[0.18] blur-3xl" />
-      <div className="absolute -bottom-64 -right-48 h-[38rem] w-[38rem] rounded-full bg-[#06D6A0] opacity-[0.12] blur-3xl" />
-      <div className="absolute -bottom-72 -left-40 h-[30rem] w-[30rem] rounded-full bg-[#2563EB] opacity-[0.12] blur-3xl" />
-      <Signature className="absolute -bottom-6 -right-16 w-[52rem] rotate-[-4deg] text-[#06D6A0] opacity-[0.04]" />
-      <Signature className="absolute -left-40 top-1/2 w-[30rem] rotate-[10deg] text-[#F3F7FB] opacity-[0.03]" />
+      <div className="absolute -left-56 -top-56 h-[34rem] w-[34rem] rounded-full bg-[#2563EB] opacity-[0.20] blur-3xl" />
+      <div className="absolute -bottom-72 -left-40 h-[30rem] w-[30rem] rounded-full bg-[#2563EB] opacity-[0.14] blur-3xl" />
+      {/* Turquoise glow + signature in the bottom-right corner */}
+      <div className="absolute -bottom-40 -right-32 h-[34rem] w-[44rem] rounded-full bg-[#06D6A0] opacity-[0.22] blur-3xl" />
+      <div className="absolute -bottom-24 right-1/4 h-64 w-[36rem] rounded-full bg-[#2563EB] opacity-[0.18] blur-3xl" />
+      <Signature className="absolute -bottom-10 right-0 w-[56rem] rotate-[-4deg] text-[#06D6A0] opacity-[0.11]" />
+      <Signature className="absolute -left-40 top-1/2 w-[30rem] rotate-[10deg] text-[#F3F7FB] opacity-[0.04]" />
     </div>
   </div>
 );
