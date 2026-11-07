@@ -26,7 +26,7 @@ export const AccountDisabledEmailTemplate = ({
         <Section>
           <Container className="mx-auto mt-8 mb-2 max-w-xl rounded-lg border border-border border-solid p-4 backdrop-blur-sm">
             <Section>
-              <Img src={getEmailAssetUrl(assetBaseUrl, 'static/logo.png')} alt="CodSign" className="mb-4 h-6" />
+              <Img src={getEmailAssetUrl(assetBaseUrl, 'static/logo.png')} alt="CodSign" className="mb-4 h-8" />
 
               <TemplateAccountDisabled assetBaseUrl={assetBaseUrl} supportEmail={supportEmail} />
             </Section>

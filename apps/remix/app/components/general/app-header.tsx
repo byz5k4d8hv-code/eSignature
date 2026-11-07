@@ -54,6 +54,11 @@ export const Header = ({ className, fullWidth = false, ...props }: HeaderProps) 
       )}
       {...props}
     >
+      {/* CodSign brand strip: navy -> blue -> turquoise */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0B3D5E] via-[#2563EB] to-[#06D6A0]"
+      />
       <div
         className={cn(
           'mx-auto flex w-full items-center justify-between gap-x-4 px-4 md:justify-normal',
