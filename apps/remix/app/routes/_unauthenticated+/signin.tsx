@@ -155,6 +155,15 @@ export default function SignIn({ loaderData }: Route.ComponentProps) {
             </Trans>
           </p>
         )}
+
+        {!isSignupEnabled && (
+          <p className="mt-6 text-center text-muted-foreground text-sm">
+            Não tem conta?{' '}
+            <Link to="/request-access" className="text-primary duration-200 hover:opacity-70">
+              Pedir acesso
+            </Link>
+          </p>
+        )}
       </div>
     </div>
   );
