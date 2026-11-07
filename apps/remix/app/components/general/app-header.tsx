@@ -48,12 +48,17 @@ export const Header = ({ className, fullWidth = false, ...props }: HeaderProps) 
   return (
     <header
       className={cn(
-        'sticky top-0 z-[60] flex h-16 w-full items-center border-b border-b-transparent bg-background/95 backdrop-blur duration-200 supports-backdrop-blur:bg-background/60',
+        'sticky top-0 z-[60] flex h-16 w-full items-center border-b border-b-transparent bg-white/70 backdrop-blur dark:bg-background/95 duration-200 supports-backdrop-blur:bg-background/60',
         (scrollY > 5 || fullWidth) && 'border-b-border',
         className,
       )}
       {...props}
     >
+      {/* CodSign brand strip: navy -> blue -> turquoise */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0B3D5E] via-[#2563EB] to-[#06D6A0]"
+      />
       <div
         className={cn(
           'mx-auto flex w-full items-center justify-between gap-x-4 px-4 md:justify-normal',
@@ -65,7 +70,7 @@ export const Header = ({ className, fullWidth = false, ...props }: HeaderProps) 
           to={getRootHref(params)}
           className="hidden rounded-md ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 md:inline"
         >
-          <BrandingLogo className="h-6 w-auto" />
+          <BrandingLogo className="h-8 w-auto" />
         </Link>
 
         <AppNavDesktop setIsCommandMenuOpen={setIsCommandMenuOpen} />

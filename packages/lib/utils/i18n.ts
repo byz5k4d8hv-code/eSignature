@@ -59,6 +59,8 @@ type ExtractLocaleDataOptions = {
  *
  * Will return the default fallback language if not found.
  */
+const CODSIGN_DEFAULT_LANG: SupportedLanguageCodes = 'pt-BR';
+
 export const extractLocaleData = ({ headers }: ExtractLocaleDataOptions): I18nLocaleData => {
   const headerLocales = (headers.get('accept-language') ?? '').split(',');
 
@@ -76,8 +78,13 @@ export const extractLocaleData = ({ headers }: ExtractLocaleDataOptions): I18nLo
     }
   });
 
+  // CodSign: Portuguese (Brazil) is the default. English browsers also get
+  // Portuguese; other supported browser languages are kept. Users can still
+  // switch language from the menu (stored in the `lang` cookie).
+  const preferred = languages.find((language) => language !== 'en');
+
   return {
-    lang: languages[0] || APP_I18N_OPTIONS.sourceLang,
+    lang: preferred || CODSIGN_DEFAULT_LANG,
     locales: headerLocales,
   };
 };
