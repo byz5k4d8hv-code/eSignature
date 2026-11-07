@@ -33,7 +33,7 @@ export default function PrivacyNotice() {
         <h3>Com quem compartilhamos</h3>
         <p>
           Com as outras partes do mesmo documento e com fornecedores necessários para o serviço (hospedagem, envio de
-          e-mail e carimbo de tempo). Não vendemos dados. Os dados ficam em servidores nos Estados Unidos
+          e-mail e carimbo de tempo). Não vendemos dados. Os dados ficam em servidores na Alemanha (União Europeia)
           (transferência internacional, LGPD art. 33), com acesso restrito e conexões criptografadas.
         </p>
         <h3>Seus direitos</h3>
@@ -62,7 +62,7 @@ export default function PrivacyNotice() {
         <h3>Who we share with</h3>
         <p>
           The other parties to the same document and the providers needed to run the service (hosting, email delivery
-          and timestamping). We do not sell data. Data is stored on servers in the United States (international
+          and timestamping). We do not sell data. Data is stored on servers in Germany (European Union) (international
           transfer), with restricted access and encrypted connections.
         </p>
         <h3>Your rights</h3>

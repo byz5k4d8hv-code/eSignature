@@ -5,7 +5,7 @@ services:
     name: codsign
     runtime: docker
     plan: free
-    region: virginia
+    region: frankfurt
     dockerfilePath: ./docker/Dockerfile
     dockerContext: .
     healthCheckPath: /api/health
