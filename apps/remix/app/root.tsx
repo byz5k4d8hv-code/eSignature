@@ -22,7 +22,7 @@ import {
   useLoaderData,
   useMatches,
 } from 'react-router';
-import { PreventFlashOnWrongTheme, ThemeProvider, useTheme } from 'remix-themes';
+import { PreventFlashOnWrongTheme, Theme, ThemeProvider, useTheme } from 'remix-themes';
 import { nonceMiddleware } from '~/middleware/nonce';
 import type { Route } from './+types/root';
 import stylesheet from './app.css?url';
@@ -71,7 +71,8 @@ export async function loader({ context, request }: Route.LoaderArgs) {
   return data(
     {
       lang,
-      theme: getTheme(),
+      // CodSign: dark theme by default; users can still switch in the menu.
+      theme: getTheme() ?? Theme.DARK,
       disableAnimations,
       basePath: getBasePath(),
       // Surface the per-request CSP nonce produced by `securityHeadersMiddleware` so all

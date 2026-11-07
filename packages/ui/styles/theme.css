@@ -142,41 +142,41 @@
   }
 
   .dark:not(.dark-mode-disabled) {
-    --background: 0 0% 14.9%;
-    --foreground: 0 0% 97%;
+    --background: 210 76% 11%; /* CodSign deep navy #071D33 */
+    --foreground: 210 50% 97%; /* soft white #F3F7FB */
 
-    --muted: 0 0% 23.4%;
-    --muted-foreground: 0 0% 85%;
+    --muted: 211 66% 15%;
+    --muted-foreground: 211 26% 67%; /* blue-grey secondary text */
 
-    --popover: 0 0% 14.9%;
-    --popover-foreground: 0 0% 90%;
+    --popover: 209 63% 17%;
+    --popover-foreground: 210 50% 97%;
 
-    --card: 0 0% 14.9%;
-    --card-border: 0 0% 27.9%;
-    --card-border-tint: 112 205 159;
-    --card-foreground: 0 0% 95%;
+    --card: 209 63% 17%; /* cards and tables #102C46 */
+    --card-border: 210 48% 25%;
+    --card-border-tint: 6 214 160;
+    --card-foreground: 210 50% 97%;
 
-    --widget: 0 0% 14.9%;
-    --widget-foreground: 0 0% 18%;
+    --widget: 209 63% 17%;
+    --widget-foreground: 210 61% 22%;
 
-    --border: 0 0% 27.9%;
-    --input: 0 0% 27.9%;
+    --border: 210 48% 25%;
+    --input: 210 48% 25%;
 
     --field-border: 214.3 31.8% 91.4%;
 
-    --primary: 221.2 83.2% 53.3%;
+    --primary: 221 83% 53%; /* #2563EB */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 23.4%;
-    --secondary-foreground: 213.1 93.9% 67.8%;
+    --secondary: 210 61% 22%;
+    --secondary-foreground: 210 50% 97%;
 
-    --accent: 0 0% 27.9%;
-    --accent-foreground: 213.1 93.9% 67.8%;
+    --accent: 210 61% 22%;
+    --accent-foreground: 164 95% 43%; /* turquoise #06D6A0 */
 
     --destructive: 0 87% 62%;
     --destructive-foreground: 0 0% 98%;
 
-    --ring: 221.2 83.2% 53.3%;
+    --ring: 164 95% 43%;
 
     --radius: 0.5rem;
 
@@ -184,7 +184,7 @@
 
     --gold: 47.9 95.8% 53.1%;
 
-    --envelope-editor-background: 0 0% 14.9%;
+    --envelope-editor-background: 209 63% 17%;
   }
 }
 
