@@ -21,21 +21,15 @@ services:
       # Neon connection string (paste in Render)
       - key: NEXT_PRIVATE_DATABASE_URL
         sync: false
-      # Email via a dedicated Gmail account + app password (paste in Render)
-      - key: NEXT_PRIVATE_SMTP_USERNAME
-        sync: false
-      - key: NEXT_PRIVATE_SMTP_PASSWORD
-        sync: false
+      # Email via Resend HTTPS API (Render free blocks SMTP ports). Domain verified in Resend.
       - key: NEXT_PRIVATE_SMTP_TRANSPORT
-        value: smtp-auth
-      - key: NEXT_PRIVATE_SMTP_HOST
-        value: smtp.gmail.com
-      - key: NEXT_PRIVATE_SMTP_PORT
-        value: "465"
-      - key: NEXT_PRIVATE_SMTP_SECURE
-        value: "true"
+        value: resend
+      - key: NEXT_PRIVATE_RESEND_API_KEY
+        sync: false
       - key: NEXT_PRIVATE_SMTP_FROM_NAME
         value: CodSign
+      - key: NEXT_PRIVATE_SMTP_FROM_ADDRESS
+        value: noreply@codsign.app
       # Seal certificate (.p12 as base64, no passphrase) (paste in Render)
       - key: NEXT_PRIVATE_SIGNING_LOCAL_FILE_CONTENTS
         sync: false
