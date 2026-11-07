@@ -29,7 +29,7 @@ services:
       - key: NEXT_PRIVATE_SMTP_FROM_NAME
         value: CodSign
       - key: NEXT_PRIVATE_SMTP_FROM_ADDRESS
-        value: noreply@codsign.com.br
+        value: noreply@codsign.app
       # Seal certificate (.p12 as base64, no passphrase) (paste in Render)
       - key: NEXT_PRIVATE_SIGNING_LOCAL_FILE_CONTENTS
         sync: false
