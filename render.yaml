@@ -39,6 +39,9 @@ services:
         value: http://timestamp.digicert.com
       - key: NEXT_PUBLIC_UPLOAD_TRANSPORT
         value: database
+      # Invite-only: no public signup. People use /request-access and admins get an email.
+      - key: NEXT_PUBLIC_DISABLE_SIGNUP
+        value: "true"
       # Free plan has 512 MB RAM. Render has no IPv6 egress, so prefer IPv4 (Gmail SMTP failed with ENETUNREACH)
       - key: NODE_OPTIONS
         value: --max-old-space-size=384 --dns-result-order=ipv4first

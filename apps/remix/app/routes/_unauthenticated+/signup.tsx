@@ -27,7 +27,8 @@ export function loader({ request }: Route.LoaderArgs) {
     isEmailPasswordSignupEnabled || isGoogleSignupEnabled || isMicrosoftSignupEnabled || isOidcSignupEnabled;
 
   if (!isAnySignupEnabled) {
-    throw redirect('/signin');
+    // CodSign: invite-only, send people to the access request form.
+    throw redirect('/request-access');
   }
 
   let returnTo = new URL(request.url).searchParams.get('returnTo') ?? undefined;
