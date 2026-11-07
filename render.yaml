@@ -21,7 +21,8 @@ services:
       # Neon connection string (paste in Render)
       - key: NEXT_PRIVATE_DATABASE_URL
         sync: false
-      # Email via a dedicated Gmail account + app password (paste in Render)
+      # Email via Brevo SMTP relay (free 300/day). Render free blocks ports 25/465/587, so use 2525.
+      # Paste the Brevo SMTP login and SMTP key in Render
       - key: NEXT_PRIVATE_SMTP_USERNAME
         sync: false
       - key: NEXT_PRIVATE_SMTP_PASSWORD
@@ -29,11 +30,13 @@ services:
       - key: NEXT_PRIVATE_SMTP_TRANSPORT
         value: smtp-auth
       - key: NEXT_PRIVATE_SMTP_HOST
-        value: smtp.gmail.com
+        value: smtp-relay.brevo.com
       - key: NEXT_PRIVATE_SMTP_PORT
-        value: "465"
+        value: "2525"
       - key: NEXT_PRIVATE_SMTP_SECURE
-        value: "true"
+        value: "false"
+      - key: NEXT_PRIVATE_SMTP_FROM_ADDRESS
+        value: codsignsignatures@gmail.com
       - key: NEXT_PRIVATE_SMTP_FROM_NAME
         value: CodSign
       # Seal certificate (.p12 as base64, no passphrase) (paste in Render)
