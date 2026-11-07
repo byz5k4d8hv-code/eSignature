@@ -69,7 +69,8 @@ export default function RequestAccess() {
       <div className="z-10 rounded-xl border border-border bg-card px-6 py-8 shadow-lg">
         <h1 className="font-semibold text-2xl">Pedir acesso</h1>
         <p className="mt-2 text-muted-foreground text-sm">
-          O CodSign funciona por convite. Envie seu pedido e avisaremos por e-mail quando sua conta for liberada.
+          Seja um dos primeiros a testar essa nova forma de assinar documentos. Envie seu pedido e avisaremos por
+          e-mail quando sua conta for liberada.
         </p>
 
         {result?.ok ? (
