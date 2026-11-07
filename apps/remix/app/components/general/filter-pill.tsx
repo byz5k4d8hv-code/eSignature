@@ -106,7 +106,7 @@ export const FilterPill = (props: FilterPillProps) => {
         <Button
           variant="outline"
           disabled={loading}
-          className={cn('border-dashed text-muted-foreground', {
+          className={cn('border-dashed text-muted-foreground dark:border-solid dark:bg-card/60 dark:text-foreground', {
             'border-solid text-foreground': hasSelection,
           })}
           data-testid={testId}

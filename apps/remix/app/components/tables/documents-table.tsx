@@ -12,7 +12,7 @@ import { Skeleton } from '@documenso/ui/primitives/skeleton';
 import { TableCell } from '@documenso/ui/primitives/table';
 import { msg } from '@lingui/core/macro';
 import { useLingui } from '@lingui/react';
-import { Loader } from 'lucide-react';
+import { FileTextIcon, Loader } from 'lucide-react';
 import { DateTime } from 'luxon';
 import { useMemo, useTransition } from 'react';
 import { Link } from 'react-router';
@@ -89,7 +89,12 @@ export const DocumentsTable = ({
       },
       {
         header: _(msg`Title`),
-        cell: ({ row }) => <DataTableTitle row={row.original} teamUrl={team?.url} teamEmail={team?.teamEmail?.email} />,
+        cell: ({ row }) => (
+          <div className="flex items-center gap-2.5">
+            <FileTextIcon className="h-5 w-5 flex-shrink-0 text-red-500" aria-hidden="true" />
+            <DataTableTitle row={row.original} teamUrl={team?.url} teamEmail={team?.teamEmail?.email} />
+          </div>
+        ),
       },
       {
         id: 'sender',
@@ -106,7 +111,7 @@ export const DocumentsTable = ({
       {
         header: _(msg`Status`),
         accessorKey: 'status',
-        cell: ({ row }) => <DocumentStatus status={row.original.status} />,
+        cell: ({ row }) => <DocumentStatus status={row.original.status} pill />,
         size: 140,
       },
       {
