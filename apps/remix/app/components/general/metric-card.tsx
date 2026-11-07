@@ -1,5 +1,6 @@
 import { cn } from '@documenso/ui/lib/utils';
 import type { LucideIcon } from 'lucide-react/dist/lucide-react';
+import { Link } from 'react-router';
 
 export type CardMetricProps = {
   icon?: LucideIcon;
@@ -8,10 +9,12 @@ export type CardMetricProps = {
   className?: string;
   children?: React.ReactNode;
   testId?: string;
+  /** CodSign: when set, the whole card links to this page. */
+  href?: string;
 };
 
-export const CardMetric = ({ icon: Icon, title, value, className, children, testId }: CardMetricProps) => {
-  return (
+export const CardMetric = ({ icon: Icon, title, value, className, children, testId, href }: CardMetricProps) => {
+  const card = (
     <div
       className={cn(
         'h-32 max-h-32 max-w-full overflow-hidden rounded-lg border border-border bg-background shadow shadow-transparent duration-200 hover:shadow-border/80',
@@ -36,5 +39,18 @@ export const CardMetric = ({ icon: Icon, title, value, className, children, test
         )}
       </div>
     </div>
+  );
+
+  if (!href) {
+    return card;
+  }
+
+  return (
+    <Link
+      to={href}
+      className="block rounded-lg transition-colors hover:[&>div]:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+    >
+      {card}
+    </Link>
   );
 };

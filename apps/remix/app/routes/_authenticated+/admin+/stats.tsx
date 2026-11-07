@@ -88,9 +88,9 @@ export default function AdminStatsPage({ loaderData }: Route.ComponentProps) {
       </h2>
 
       <div className="mt-8 grid flex-1 grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
-        <CardMetric icon={Users} title={_(msg`Total Users`)} value={usersCount} />
-        <CardMetric icon={File} title={_(msg`Total Documents`)} value={docStats.ALL} />
-        <CardMetric icon={UserPlus} title={_(msg`Active Subscriptions`)} value={organisationsWithSubscriptionsCount} />
+        <CardMetric icon={Users} title={_(msg`Total Users`)} value={usersCount} href="/admin/users" />
+        <CardMetric icon={File} title={_(msg`Total Documents`)} value={docStats.ALL} href="/admin/documents" />
+        <CardMetric icon={UserPlus} title={_(msg`Active Subscriptions`)} value={organisationsWithSubscriptionsCount} href="/admin/organisations" />
 
         <CardMetric icon={FileCog} title={_(msg`App Version`)} value={`v${version}`} />
       </div>
@@ -106,9 +106,9 @@ export default function AdminStatsPage({ loaderData }: Route.ComponentProps) {
           </h3>
 
           <div className="mt-4 mb-8 grid flex-1 grid-cols-1 gap-4 md:grid-cols-2">
-            <CardMetric icon={FileEdit} title={_(msg`Drafted Documents`)} value={docStats.DRAFT} />
-            <CardMetric icon={FileClock} title={_(msg`Pending Documents`)} value={docStats.PENDING} />
-            <CardMetric icon={FileCheck} title={_(msg`Completed Documents`)} value={docStats.COMPLETED} />
+            <CardMetric icon={FileEdit} title={_(msg`Drafted Documents`)} value={docStats.DRAFT} href="/admin/documents" />
+            <CardMetric icon={FileClock} title={_(msg`Pending Documents`)} value={docStats.PENDING} href="/admin/documents" />
+            <CardMetric icon={FileCheck} title={_(msg`Completed Documents`)} value={docStats.COMPLETED} href="/admin/documents" />
           </div>
         </div>
 
