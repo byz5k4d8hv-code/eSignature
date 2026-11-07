@@ -182,9 +182,9 @@ export default function DocumentsPage() {
         <FolderGrid type={FolderType.DOCUMENT} parentId={folderId ?? null} />
 
         <div className="mt-8 flex flex-row items-center">
-          <Avatar className="mr-3 h-12 w-12 border-2 border-white border-solid dark:border-border">
+          <Avatar className="mr-3 h-12 w-12 border-2 border-white border-solid dark:border-[#06D6A0]/40 dark:shadow-[0_0_16px_rgba(6,214,160,0.2)]">
             {team.avatarImageId && <AvatarImage src={formatAvatarUrl(team.avatarImageId)} />}
-            <AvatarFallback className="text-muted-foreground text-xs">{team.name.slice(0, 1)}</AvatarFallback>
+            <AvatarFallback className="text-muted-foreground text-xs dark:bg-[#0F3A4D] dark:font-semibold dark:text-base dark:text-white">{team.name.slice(0, 1)}</AvatarFallback>
           </Avatar>
 
           <h2 className="font-semibold text-4xl">

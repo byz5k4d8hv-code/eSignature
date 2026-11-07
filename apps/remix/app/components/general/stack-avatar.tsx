@@ -29,16 +29,16 @@ export const StackAvatar = ({ first, zIndex, fallbackText = '', type, className 
 
   switch (type) {
     case RecipientStatusType.UNSIGNED:
-      classes = 'bg-dawn-200 text-dawn-900';
+      classes = 'bg-dawn-200 text-dawn-900 dark:bg-[#1E3A6E] dark:text-[#C7DBFF]';
       break;
     case RecipientStatusType.OPENED:
-      classes = 'bg-yellow-200 text-yellow-700';
+      classes = 'bg-yellow-200 text-yellow-700 dark:bg-[#1E3A6E] dark:text-[#FDE68A]';
       break;
     case RecipientStatusType.WAITING:
-      classes = 'bg-water text-water-700';
+      classes = 'bg-water text-water-700 dark:bg-[#1E3A6E] dark:text-[#C7DBFF]';
       break;
     case RecipientStatusType.COMPLETED:
-      classes = 'bg-documenso-200 text-documenso-800';
+      classes = 'bg-documenso-200 text-documenso-800 dark:bg-[#1E40AF] dark:text-white';
       break;
     case RecipientStatusType.REJECTED:
       classes = 'bg-red-200 text-red-800';

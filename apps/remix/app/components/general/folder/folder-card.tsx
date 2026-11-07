@@ -15,6 +15,7 @@ import { FolderType } from '@prisma/client';
 import {
   ArrowRightIcon,
   FolderIcon,
+  ChevronRightIcon,
   FolderPlusIcon,
   MoreVerticalIcon,
   PinIcon,
@@ -135,13 +136,13 @@ export const FolderCard = ({ folder, onMove, onSettings, onDelete }: FolderCardP
 
 export const FolderCardEmpty = ({ type }: { type: FolderType }) => {
   return (
-    <Card className="h-full border border-border transition-all hover:bg-muted/50">
+    <Card className="h-full border border-border transition-all hover:bg-muted/50 dark:bg-card/80">
       <CardContent className="p-4">
         <div className="flex items-center gap-3">
-          <FolderPlusIcon className="h-6 w-6 text-muted-foreground/60" />
+          <FolderPlusIcon className="h-6 w-6 text-muted-foreground/60 dark:text-[#06D6A0]" />
 
-          <div>
-            <h3 className="flex items-center gap-2 font-medium text-muted-foreground">
+          <div className="flex-1">
+            <h3 className="flex items-center gap-2 font-medium text-muted-foreground dark:text-foreground">
               <Trans>Create folder</Trans>
             </h3>
 
@@ -153,6 +154,8 @@ export const FolderCardEmpty = ({ type }: { type: FolderType }) => {
               )}
             </div>
           </div>
+
+          <ChevronRightIcon className="h-5 w-5 flex-shrink-0 text-muted-foreground" aria-hidden="true" />
         </div>
       </CardContent>
     </Card>

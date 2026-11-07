@@ -68,19 +68,38 @@ export const FRIENDLY_STATUS_MAP: Record<ExtendedDocumentStatus, FriendlyStatus>
 export type DocumentStatusProps = HTMLAttributes<HTMLSpanElement> & {
   status: ExtendedDocumentStatus;
   inheritColor?: boolean;
+  pill?: boolean;
 };
 
-export const DocumentStatus = ({ className, status, inheritColor, ...props }: DocumentStatusProps) => {
+// CodSign: pill look used in the documents table.
+const STATUS_PILL: Record<string, string> = {
+  COMPLETED:
+    'border-[#06D6A0]/30 bg-[#06D6A0]/10 text-[#047857] dark:border-[#06D6A0]/25 dark:bg-[#06D6A0]/10 dark:text-[#34E3B5]',
+  PENDING:
+    'border-[#2563EB]/30 bg-[#2563EB]/10 text-[#1D4ED8] dark:border-[#3B82F6]/25 dark:bg-[#3B82F6]/10 dark:text-[#7DB4FF]',
+  DRAFT: 'border-yellow-500/30 bg-yellow-500/10 text-yellow-700 dark:text-yellow-200',
+  REJECTED: 'border-red-500/30 bg-red-500/10 text-red-600 dark:text-red-300',
+};
+
+export const DocumentStatus = ({ className, status, inheritColor, pill, ...props }: DocumentStatusProps) => {
   const { _ } = useLingui();
 
   const { label, icon: Icon, color } = FRIENDLY_STATUS_MAP[status];
 
   return (
-    <span className={cn('flex items-center', className)} {...props}>
+    <span
+      className={cn(
+        'flex items-center',
+        pill && 'w-fit rounded-full border px-3 py-1 font-medium text-sm',
+        pill && (STATUS_PILL[status] ?? 'border-border bg-muted text-muted-foreground'),
+        className,
+      )}
+      {...props}
+    >
       {Icon && (
         <Icon
           className={cn('mr-2 inline-block h-4 w-4', {
-            [color]: !inheritColor,
+            [color]: !inheritColor && !pill,
           })}
         />
       )}
